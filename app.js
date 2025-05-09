@@ -82,8 +82,12 @@ io.on('connection', (socket) => {
 // app.listen(port,(req,res)=>{
 //   console.log(`server is running at http://localhost:${port}`);
 // });
-const port = process.env.PORT || 6869;
-server.listen(port, () => {
+// const port = process.env.PORT || 6869;
+// server.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
+const port = process.env.PORT || 10000;
+server.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
 });
 
