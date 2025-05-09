@@ -78,10 +78,15 @@ io.on('connection', (socket) => {
 //   console.log(`Server is running at http://localhost:${port}`);
 // });
 
-port=process.env.port || 6869;
-app.listen(port,(req,res)=>{
-  console.log(`server is running at http://localhost:${port}`);
+// port=process.env.port || 6869;
+// app.listen(port,(req,res)=>{
+//   console.log(`server is running at http://localhost:${port}`);
+// });
+const port = process.env.PORT || 6869;
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
+
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
